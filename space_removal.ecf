@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+  <system     xmlns="http://www.eiffel.com/developers/xml/configuration-1-15-0"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-15-0
+                  http://www.eiffel.com/developers/xml/configuration-1-15-0.xsd"
+  uuid="D1659B65-26A9-4E5B-BDB4-A9C5FF2E8707"
+  
+  name="space_removal">
+
+	<target name="space_removal">
+		<root feature="execute" class="SPACE_REMOVAL"/>
+    <option warning="true">
+      <assertions precondition="true" postcondition="true" check="true"
+      invariant="true" loop="true" supplier_precondition="true"/>
+    </option>
+    <precompile name="base_safe_pre" location="$ISE_PRECOMP\base-safe.ecf">
+    </precompile>
+    <library name="base_safe" location="$ISE_EIFFEL\library\base\base-safe.ecf">
+      <option> <assertions precondition="true"/> </option>
+    </library>
+    <library name="espec_safe" readonly="true"
+    location="$ISE_LIBRARY\contrib\library\testing\framework\espec\library\espec-safe.ecf"/>
+
+		<cluster name="application" location=".\"/>
+	</target>
+</system>
